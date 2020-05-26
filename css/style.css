@@ -1,3 +1,59 @@
-h1{
-color:red;    
+body {
+  background-image: url("img/tlo.webp");
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;}
+  
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
+.logo {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 100px;
+  text-align: center;
+  
+}
+.Lista {
+  width: 1240px;
+  display: flex;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  
+}
+.kafelek {
+  padding: 10px;
+  margin: 10px;
+  width: 172px;
+  height: 25px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+a.link {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 172px;
+  height: 25px;
+  transition: 0.25s;
+  text-align: center;
+}
+.kafelek:hover > a.link
+{
+  color: red;
+}
+
+
+
+
