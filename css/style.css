@@ -19,7 +19,7 @@ body {
   text-align: center;
   
 }
-.Lista {
+.lista {
   width: 1240px;
   display: flex;
   border-top: 1px solid #fff;
@@ -29,7 +29,7 @@ body {
   align-items: center;
   
 }
-.kafelek {
+.tile {
   padding: 10px;
   margin: 10px;
   width: 172px;
@@ -49,11 +49,56 @@ a.link {
   transition: 0.25s;
   text-align: center;
 }
-.kafelek:hover > a.link
+.tile:hover > a.link
 {
   color: red;
 }
-
-
-
-
+.main
+{
+  width: 1000px;
+  height: 700px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.kontakt
+{
+  background: rgba(168, 161, 161, 0.5);
+  margin: 20px;
+  color: #fff;
+  font-size: 22px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* dostosowuje sie do rodzica a nie do calej strony */
+  position: relative; 
+}
+.ikona
+{
+  width: 35px;
+}
+.link1
+{color: #ffffff;
+text-decoration: none;
+display: block;
+width: 35px;
+height: 35px;
+}
+.socialmedia
+{
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.title
+{
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+  font-weight: 800;
+}
