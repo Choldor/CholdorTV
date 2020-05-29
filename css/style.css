@@ -5,6 +5,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  font-size: 25px;
+  font-weight: bold;
+  background-attachment: fixed;
 }
 
 .container {
@@ -92,7 +95,7 @@ a.link {
 }
 .title {
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   margin: 5px;
   font-weight: 800;
 }
@@ -105,14 +108,12 @@ a.link {
   padding: 0;
   display: none;
   border-style: solid;
-  
-
+  z-index: 40;
 }
-.dropdown-menu:hover
-{
+.dropdown-menu:hover {
   display: block;
 }
-.nav-item{
+.nav-item {
   border-bottom: 1px solid #fff;
   color: white;
   padding: 5px;
@@ -120,15 +121,67 @@ a.link {
 
 .nav-item a {
   color: #fff;
-text-decoration: none;
-font-size: 16px;
-transition: 0.4s;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.4s;
 }
 .heroes3:hover > .dropdown-menu {
-  display:inline-block;
-  font-weight: bold;}
-  .nav-item a:hover
-  {
-    color: rgb(10, 103, 243);
-  
-  }
+  display: inline-block;
+  font-weight: bold;
+}
+.nav-item a:hover {
+  color: rgb(10, 103, 243);
+}
+.tekst {
+  font-weight: bold;
+}
+.link2 {
+  color: #ffffff;
+  text-decoration: none;
+}
+.link2:hover {
+  color: red;
+  transition: 0.3s;
+}
+.img2 {
+  width: 700px;
+  margin-left: 300px;
+}
+.tekst2 {
+  text-align: center;
+  justify-content: center;
+}
+.img3 {
+  margin-left: 500px;
+}
+.img4 {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  display: flex;
+  width: 300px;
+  margin-left: 30px;
+}
+.img4:hover {
+  -moz-transform: scale(2);
+  -o-transform: scale(2);
+  -webkit-transform: scale(2);
+  box-shadow: 1px 1px 1px black;
+}
+.img6 {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  width: 450px;
+  margin-left: 5px;
+}
+.img6:hover {
+  -moz-transform: scale(2);
+  -o-transform: scale(2);
+  -webkit-transform: scale(2);
+  box-shadow: 1px 1px 1px black;
+}
+.first-steps-container
+{
+  display: flex;
+}
