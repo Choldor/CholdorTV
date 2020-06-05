@@ -41,7 +41,7 @@
         </div>
       </div>
     <div>
-      <select name="spells" size="w">
+      <select name="spells" size="w" class="spell">
         <option>Magic Arrow</option>
         <option>Fire Wall</option>
         <option>Fire Ball</option>
@@ -56,9 +56,24 @@
         <option>Meteor Shower</option>
         <option>Implosion</option>
       </select>
-      <button>X</button>
-      <input type="text" id="value">
-      <h2 id="result"></h2>
+      <label for="spellPower">Spell power:</label>
+      <input name="spellPower" type="number" min="1" max="99" id="value" class="spellpower">
+      <label for="magic">Magic:</label>
+      <select name="magic" size="w">
+        <option>brak</option>
+        <option>ogien</option>
+        <option>woda</option>
+        <option>powietrze</option>
+        <option>ziemia</option>
+      </select>
+      <label for="magic">Magic level:</label>
+      <select name="spellLevel" size="w">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <button class="final-button">Oblicz</button>
+      <h2 id="result" class="result"></h2>
     </div>
     </div>
     <footer class="down-line">

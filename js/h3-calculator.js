@@ -1,16 +1,38 @@
 const spells = [
-    {name:"Magic Arrow", power:10, power1:10, power2:20, power3:30},
-    {name:"Fire Wall", power:10, power1:10, power2:20, power3:30},
-    {name:"Fire Ball", power:10, power1:15, power2:30, power3:60},
-    {name:"Land Mine", power:10, power1:25, power2:50, power3:100},
-    {name:"Armageddon", power:50, power1:30, power2:60, power3:120},
-    {name:"Inferno", power:10, power1:25, power2:40, power3:80},
-    {name:"Lightning Bolt", power:25, power1:10, power2:20, power3:30},
-    {name:"Chain Lightning", power:40, power1:25, power2:50, power3:100},
-    {name:"Ice Bolt", power:20, power1:10, power2:20, power3:30},
-    {name:"Frost Ring", power:10, power1:15, power2:30, power3:60},
-    {name:"Death Ripple", power:5, power1:10, power2:20, power3:30},
-    {name:"Meteor Shower", power:25, power1:25, power2:50, power3:100},
-    {name:"Implosion", power:75, power1:100, power2:200, power3:300},
+    {name:"Magic Arrow", rate:10, power: [10,20,30]},
+    {name:"Fire Wall", rate:10, power: [10,20,30]},
+    {name:"Fire Ball", rate:10, power: [15,30,60]},
+    {name:"Land Mine", rate:10, power: [25,50,100]},
+    {name:"Armageddon", rate:50, power: [30,60,120]},
+    {name:"Inferno", rate:10, power: [25,50,80]},
+    {name:"Lightning Bolt", rate:25, power: [10,20,30]},
+    {name:"Chain Lightning", rate:40, power: [25,50,100]},
+    {name:"Ice Bolt", rate:20, power: [10,20,30]},
+    {name:"Frost Ring", rate:10, power: [15,30,60]},
+    {name:"Death Ripple", rate:5, power: [10,20,30]},
+    {name:"Meteor Shower", rate:25, power: [25,50,100]},
+    {name:"Implosion", rate:75, power: [100,200,300]},
 ]
 console.log(spells)
+console.log(spells[1].power[2])
+
+const spellpower = document.querySelector('.spellpower');
+const spell = document.querySelector('.spell');
+const finalButton = document.querySelector('.final-button')
+const result = document.querySelector('.result')
+console.log(spellpower)
+console.log(spell)
+console.log(finalButton)
+
+const calculateValue = () => {
+    console.log('click', spellpower.value);
+    result.innerHTML = spellpower.value;
+}
+
+finalButton.addEventListener('click', calculateValue)
+
+
+ 
+
+
+
