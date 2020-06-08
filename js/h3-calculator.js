@@ -13,8 +13,10 @@ const spells = [
     {name:"Meteor Shower", rate:25, power: [25,50,100]},
     {name:"Implosion", rate:75, power: [100,200,300]},
 ]
-console.log(spells)
-console.log(spells[1].power[2])
+const magicLvl = document.querySelector('.magic-lvl')
+const magic = document.querySelector('.magic')
+const magicLvlCointainer = document.querySelector('.magic-lvl-container')
+
 
 const spellpower = document.querySelector('.spellpower');
 const spell = document.querySelector('.spell');
@@ -22,14 +24,31 @@ const finalButton = document.querySelector('.final-button')
 const result = document.querySelector('.result')
 console.log(spellpower)
 console.log(spell)
-console.log(finalButton)
+console.log(magic.value)
 
-const calculateValue = () => {
+const calculateValue = () =>{
+    const spellObj = spells.find(el => el.name===spell.value)
+    const spellRate = parseInt(spellObj.rate)
+    let finalValue;
+    if (magic.value ==='brak') {
+finalValue = spellRate*parseInt(spellpower.value)+spellObj.power[0]
+    } else {
+        finalValue = spellRate*parseInt(spellpower.value)+spellObj.power[parseInt(magicLvl.value)-1]
+    };
     console.log('click', spellpower.value);
-    result.innerHTML = spellpower.value;
+    result.innerHTML = finalValue;
+    console.log(spellRate*parseInt(spellpower.value)+parseInt(magicLvl.value))
+    
 }
-
+const toggleMagicLvl = () => {
+if (magic.value ==='brak') {
+    magicLvlCointainer.classList.add('hide'); }
+else {
+    magicLvlCointainer.classList.remove('hide');}
+}
 finalButton.addEventListener('click', calculateValue)
+magic.addEventListener('change', toggleMagicLvl)
+
 
 
  

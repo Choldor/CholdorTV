@@ -18,4 +18,4 @@ const handleClick = () => {
 
 
 hamburger.addEventListener('click', handleClick);
-arrow.addEventListener('click', handleArrowClick)
+arrow.addEventListener('click', handleArrowClick);
