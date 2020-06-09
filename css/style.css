@@ -305,13 +305,50 @@ a.link3 {
 }
 .calculate {
   width: 100%;
-  height: 100%;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+}
+.final-button {
+  height: 20px;
 }
 .book-magic {
   background-image: url("img/ksiegaczarow.png");
+  margin: 10px;
+  width: 36%;
+  height: 460px;
+  flex-wrap: wrap;
+  margin-right: 0px;
+}
+.img-spell{
+  padding: 10px;
+  margin-left: 45px;
+  margin-right: 0px;
+  width: 80px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.img-spell:hover {
+  filter: brightness(50%);
+  
+}
+.magic-select {
+  width: 17%;
+  margin-top: 10px;
+}
+.img-magic {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.img-magic:hover {
+  filter: brightness(50%);
+}
+.img-all-magic{
+  width: 208px;
+  height: 88px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.img-all-magic:hover {
+  filter: brightness(50%);
 }
 .hide {
 display:none;
