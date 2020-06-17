@@ -40,9 +40,10 @@
           <a href="omnie.html" class="link">O Mnie</a>
         </div>
       </div>
-    <div class="calculate">
+    <div class="calculator">
+      <div class="calculator-left">
       <div class="book-magic">
-        <img src="css/img/03_magicarrow.gif" class="img-spell all" >
+        <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth" >
         <img src="css/img/25_deathripple.gif" class="img-spell earth">
         <img src="css/img/14_firewall.gif" class="img-spell fire">
         <img src="css/img/17_icebolt.gif" class="img-spell water">
@@ -55,45 +56,94 @@
         <img src="css/img/23_inferno.gif" class="img-spell fire">
         <img src="css/img/24_meteorshower.gif" class="img-spell earth">
         <img src="css/img/19_implosion.gif" class="img-spell earth">
-        <select name="spells" size="w" class="spell">
-        <option>Magic Arrow</option>
-        <option>Fire Wall</option>
-        <option>Fire Ball</option>
-        <option>Land Mine</option>
-        <option>Armageddon</option>
-        <option>Inferno</option>
-        <option>Lightning Bolt</option>
-        <option>Chain Lightning</option>
-        <option>Ice Bolt</option>
-        <option>Frost Ring</option>
-        <option>Death Ripple</option>
-        <option>Meteor Shower</option>
-        <option>Implosion</option>
-      </select></div>
-      <div class="magic-select">
-        <img src="css/img/powietrze.png" class="img-magic">
-        <img src="css/img/ziemia.png" class="img-magic">
-        <img src="css/img/ogien.png" class="img-magic magic-fire">
-        <img src="css/img/woda.png" class="img-magic">
-        <img src="css/img/wszystkie czary.png" class="img-all-magic">
-
       </div>
-      <div><label for="spellPower">Spell power:</label>
+      <div class="magic-select">
+        <img src="css/img/powietrze.png" class="img-magic magic-air">
+        <img src="css/img/ziemia.png" class="img-magic magic-earth">
+        <img src="css/img/ogien.png" class="img-magic magic-fire">
+        <img src="css/img/woda.png" class="img-magic magic-water">
+        <img src="css/img/wszystkie czary.png" class="img-magic magic-all">
+      </div>
+    </div>
+    
+      <div class="calculator-right">
+        <div class="calculate">
+      <div>
+        <select name="hero" id="hero">
+        <option value="none">Bohater</option>
+        <option value="frost-ring">Adelaide</option>
+        <option value="meteor-shower">Aislinn</option>
+        <option value="ice-bolt">Alagar</option>
+        <option value="magic-arrow">Ciele</option>
+        <option value="meteor-showe">Deemer</option>
+        <option value="fire-wall">Luna</option>
+        <option value="fire-ball">Manfred</option>
+        <option value="death-ripple">Septienna</option>
+        <option value="chain-lightning">Solmyr</option>
+        <option value="fireball">Xarfax</option>
+        <option value="inferno">Xyron</option>
+      </select>
+    </div>
+      <div class="spellpower"><label for="spellPower"><img src="css/img/Power_skill.png" class="left-img-spellpower"></label>
       <input name="spellPower" type="number" min="1" max="99" id="value" class="spellpower"></div>
       <label for="magic">Magic:</label>
       <input type="checkbox" class="magic">
       </input>
       <div class="hide magic-lvl-container">
-      <label for="magic" >Magic level:</label>
-      <select name="spellLevel" size="w"  class="magic-lvl">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select></div>
+    <img src="css/img/Basic_Sorcery.png" class="left-img">
+    <img src="css/img/Advanced_Sorcery.png" class="left-img">
+    <img src="css/img/Expert_Sorcery.png" class="left-img">
+      </div>
+      
+      <div>
+        <img src="css/img/Artifact_Orb_of_Driving_Rain.gif">
+        <img src="css/img/Artifact_Orb_of_Silt.gif">
+        <img src="css/img/Artifact_Orb_of_Tempestuous_Fire.gif">
+        <img src="css/img/Artifact_Orb_of_the_Firmament.gif">
+      </div>
+      <div>
+      <input type="checkbox" class="orb air"></input>
+      <input type="checkbox" class="orb earth"></input>
+      <input type="checkbox" class="orb fire"></input>
+      <input type="checkbox" class="orb water"></input>
+      </div>
       <button class="final-button">Oblicz</button>
       <h2 id="result" class="result"></h2>
     </div>
+    <div class="castle">
+
     </div>
+    <div class="town">
+<img src="css/img/Town_Castle.gif">
+<img src="css/img/Town_Rampart.gif">
+<img src="css/img/Town_Tower.gif">
+<img src="css/img/Town_Inferno.gif">
+<img src="css/img/Town_Necropolis.gif">
+<img src="css/img/Town_Dungeon.gif">
+<img src="css/img/Town_Stronghold.gif">
+<img src="css/img/Town_Fortress.gif">
+<img src="css/img/Town_Conflux.gif">
+<img src="css/img/Town_Cove.gif">
+  </div>
+  <div class="creature">
+    <img src="css/img/Creature_Halberdier.gif" class="img-creature">
+    <img src="css/img/Creature_Pikeman.gif" class="img-creature">
+    <img src="css/img/Creature_Archer.gif" class="img-creature">
+    <img src="css/img/Creature_Marksman.gif" class="img-creature">
+    <img src="css/img/Creature_Griffin.gif" class="img-creature">
+    <img src="css/img/Creature_Royal_Griffin.gif" class="img-creature">
+    <img src="css/img/Creature_Swordsman.gif" class="img-creature">
+    <img src="css/img/Creature_Crusader.gif" class="img-creature">
+    <img src="css/img/Creature_Monk.gif" class="img-creature">
+    <img src="css/img/Creature_Zealot.gif" class="img-creature">
+    <img src="css/img/Creature_Cavalier.gif" class="img-creature">
+    <img src="css/img/Creature_Champion.gif" class="img-creature">
+    <img src="css/img/Creature_Angel.gif" class="img-creature">
+    <img src="css/img/Creature_Archangel.gif" class="img-creature">
+  </div>
+  </div>
+ 
+  </div>
     <footer class="down-line">
       <div class="footer-items">
         <div class="footer-column">

@@ -225,9 +225,6 @@ footer {
   background-color: rgba(149, 163, 163, 0.308);
  justify-content: center;
 }
-.footer {
-  
-}
 
 .footer-column {
   display: flex;
@@ -303,26 +300,28 @@ a.link3 {
   margin: 20px;
 
 }
-.calculate {
+.calculator {
   width: 100%;
   display: flex;
+  position: relative;
+  background-color: #290c30;
 }
+.calculator-left {
+  display: flex;
+  margin: 20px;
+  
+}
+
 .final-button {
   height: 20px;
 }
 .book-magic {
   background-image: url("img/ksiegaczarow.png");
-  margin: 10px;
-  width: 36%;
-  height: 460px;
-  flex-wrap: wrap;
-  margin-right: 0px;
+  background-repeat: no-repeat;
+  padding: 10px 0px 0px 60px;
+  width: 450px;
 }
 .img-spell{
-  padding: 10px;
-  margin-left: 45px;
-  margin-right: 0px;
-  width: 80px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -331,24 +330,72 @@ a.link3 {
   
 }
 .magic-select {
-  width: 17%;
-  margin-top: 10px;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 .img-magic {
   cursor: pointer;
   transition: 0.2s;
+
 }
 .img-magic:hover {
   filter: brightness(50%);
 }
-.img-all-magic{
-  width: 208px;
-  height: 88px;
-  cursor: pointer;
-  transition: 0.2s;
+
+.calculator-right {
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
 }
-.img-all-magic:hover {
+.calculate {
+  background-color: #00005c;
+  border: 2px solid rgb(121, 28, 28);
+  padding: 10px;
+  text-align: -webkit-center;
+}
+.spellpower {
+  display: block;
+  padding: 1px;
+}
+.orb{
+  margin: 0px 16px 0px 15px;
+}
+.left-img {
+  width: 50px;
+  cursor: pointer;
+}
+.left-img:hover{
   filter: brightness(50%);
+}
+.left-img-spellpower {
+  width: 50px;
+}
+.town {
+  position: absolute;
+  width: 180px;
+  border: 2px solid rgb(121, 28, 28);
+  height: 150px;
+  top: 10px;
+  right: 30px;
+  padding: 5px;
+}
+.creature {
+  width: 180px;
+  border: 2px solid rgb(121, 28, 28);
+  height: 150px;
+  padding: 10px;
+  position: absolute;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  top: 180px;
+  right: 30px;
+  
+}
+.img-creature {
 }
 .hide {
 display:none;

@@ -52,11 +52,43 @@ const toggleMagicLvl = () => {
 finalButton.addEventListener("click", calculateValue);
 magic.addEventListener("change", toggleMagicLvl);
 
-const allSpells = document.querySelectorAll(".img-spell")
+const allSpells = document.querySelectorAll(".img-spell");
 const fire = document.querySelectorAll(".fire");
 const earth = document.querySelectorAll(".earth");
 const air = document.querySelectorAll(".air");
 const water = document.querySelectorAll(".water");
+const magicFire = document.querySelector(".magic-fire");
+const magicAir = document.querySelector(".magic-air");
+const magicEarth = document.querySelector(".magic-earth");
+const magicWater = document.querySelector(".magic-water");
+const magicAll = document.querySelector(".magic-all");
 
-allSpells.forEach(singleSpell => singleSpell.style.display = "none" );
-fire.forEach(fire => fire.style.display = "inline-flex");
+const showFire = () => {
+  allSpells.forEach((singleSpell) => (singleSpell.style.display = "none"));
+  fire.forEach((fire) => (fire.style.display = "inline-flex"));
+};
+magicFire.addEventListener("click", showFire);
+const showAir = () => {
+  allSpells.forEach(singleSpell => singleSpell.style.display = "none");
+  air.forEach(air => air.style.display = "inline-flex");
+};
+magicAir.addEventListener("click", showAir);
+const showWater = () => {
+  allSpells.forEach((singleSpell) => (singleSpell.style.display = "none"));
+  water.forEach((water) => (water.style.display = "inline-flex"));
+};
+magicWater.addEventListener("click", showWater);
+const showEarth = () => {
+  allSpells.forEach((singleSpell) => (singleSpell.style.display = "none"));
+  earth.forEach((earth) => (earth.style.display = "inline-flex"));
+};
+magicEarth.addEventListener("click", showEarth);
+const showAll = () => {
+  allSpells.forEach((singleSpell) => (singleSpell.style.display = "inline-flex"));
+};
+magicAll.addEventListener("click", showAll);
+
+allSpells.forEach(spell => spell.addEventListener("click", () => {
+  
+  console.log(spell.dataset.spellName)
+}) ) 
