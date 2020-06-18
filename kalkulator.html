@@ -44,18 +44,18 @@
       <div class="calculator-left">
       <div class="book-magic">
         <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth" >
-        <img src="css/img/25_deathripple.gif" class="img-spell earth">
-        <img src="css/img/14_firewall.gif" class="img-spell fire">
-        <img src="css/img/17_icebolt.gif" class="img-spell water">
-        <img src="css/img/18_lightningbolt.gif" class="img-spell air">
-        <img src="css/img/22_fireball.gif" class="img-spell fire">
-        <img src="css/img/21_frostring.gif" class="img-spell water">
-        <img src="css/img/12_landmine.gif" class="img-spell fire">
-        <img src="css/img/27_armageddon.gif" class="img-spell fire">
-        <img src="css/img/20_chainlightning.gif" class="img-spell air">
-        <img src="css/img/23_inferno.gif" class="img-spell fire">
-        <img src="css/img/24_meteorshower.gif" class="img-spell earth">
-        <img src="css/img/19_implosion.gif" class="img-spell earth">
+        <img data-spell-name="Death Ripple" src="css/img/25_deathripple.gif" class="img-spell earth">
+        <img data-spell-name="Fire Wall" src="css/img/14_firewall.gif" class="img-spell fire">
+        <img data-spell-name="Ice Bolt" src="css/img/17_icebolt.gif" class="img-spell water">
+        <img data-spell-name="Lightning Bolt" src="css/img/18_lightningbolt.gif" class="img-spell air">
+        <img data-spell-name="Fire Ball" src="css/img/22_fireball.gif" class="img-spell fire">
+        <img data-spell-name="Frost Ring" src="css/img/21_frostring.gif" class="img-spell water">
+        <img data-spell-name="Land Mine" src="css/img/12_landmine.gif" class="img-spell fire">
+        <img data-spell-name="Armageddon" src="css/img/27_armageddon.gif" class="img-spell fire">
+        <img data-spell-name="Chain Lightning" src="css/img/20_chainlightning.gif" class="img-spell air">
+        <img data-spell-name="Inferno" src="css/img/23_inferno.gif" class="img-spell fire">
+        <img data-spell-name="Meteor Shower" src="css/img/24_meteorshower.gif" class="img-spell earth">
+        <img data-spell-name="Implosion" src="css/img/19_implosion.gif" class="img-spell earth">
       </div>
       <div class="magic-select">
         <img src="css/img/powietrze.png" class="img-magic magic-air">
@@ -84,7 +84,10 @@
         <option value="inferno">Xyron</option>
       </select>
     </div>
-      <div class="spellpower"><label for="spellPower"><img src="css/img/Power_skill.png" class="left-img-spellpower"></label>
+      <div class="spellpower">
+        <label for="spellPower">
+          <img src="css/img/Power_skill.png" class="left-img-spellpower">
+        </label>
       <input name="spellPower" type="number" min="1" max="99" id="value" class="spellpower"></div>
       <label for="magic">Magic:</label>
       <input type="checkbox" class="magic">
@@ -110,37 +113,171 @@
       <button class="final-button">Oblicz</button>
       <h2 id="result" class="result"></h2>
     </div>
-    <div class="castle">
 
-    </div>
+    <div class="town-creature">
     <div class="town">
-<img src="css/img/Town_Castle.gif">
-<img src="css/img/Town_Rampart.gif">
-<img src="css/img/Town_Tower.gif">
-<img src="css/img/Town_Inferno.gif">
-<img src="css/img/Town_Necropolis.gif">
-<img src="css/img/Town_Dungeon.gif">
-<img src="css/img/Town_Stronghold.gif">
-<img src="css/img/Town_Fortress.gif">
-<img src="css/img/Town_Conflux.gif">
-<img src="css/img/Town_Cove.gif">
+<img src="css/img/Town_Castle.gif" class="town-img  castle">
+<img src="css/img/Town_Rampart.gif" class="town-img rampart">
+<img src="css/img/Town_Tower.gif" class="town-img tower">
+<img src="css/img/Town_Inferno.gif" class="town-img inferno">
+<img src="css/img/Town_Necropolis.gif" class="town-img necropolis">
+<img src="css/img/Town_Dungeon.gif" class="town-img dungeon">
+<img src="css/img/Town_Stronghold.gif" class="town-img stronghold">
+<img src="css/img/Town_Fortress.gif" class="town-img fortress">
+<img src="css/img/Town_Conflux.gif" class="town-img conflux">
+<img src="css/img/Town_Cove.gif" class="town-img cove">
+<img src="css/img/Town_Neutral.gif" class="town-img neutral">
   </div>
   <div class="creature">
-    <img src="css/img/Creature_Halberdier.gif" class="img-creature">
-    <img src="css/img/Creature_Pikeman.gif" class="img-creature">
-    <img src="css/img/Creature_Archer.gif" class="img-creature">
-    <img src="css/img/Creature_Marksman.gif" class="img-creature">
-    <img src="css/img/Creature_Griffin.gif" class="img-creature">
-    <img src="css/img/Creature_Royal_Griffin.gif" class="img-creature">
-    <img src="css/img/Creature_Swordsman.gif" class="img-creature">
-    <img src="css/img/Creature_Crusader.gif" class="img-creature">
-    <img src="css/img/Creature_Monk.gif" class="img-creature">
-    <img src="css/img/Creature_Zealot.gif" class="img-creature">
-    <img src="css/img/Creature_Cavalier.gif" class="img-creature">
-    <img src="css/img/Creature_Champion.gif" class="img-creature">
-    <img src="css/img/Creature_Angel.gif" class="img-creature">
-    <img src="css/img/Creature_Archangel.gif" class="img-creature">
+    <img src="css/img/Creature_Halberdier.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Pikeman.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Archer.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Marksman.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Griffin.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Royal_Griffin.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Swordsman.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Crusader.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Monk.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Zealot.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Cavalier.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Champion.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Angel.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Archangel.gif" class="img-creature castle-creature">
+    <img src="css/img/Creature_Centaur.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Centaur_Captain.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Dwarf.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Battle_Dwarf.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Wood_Elf.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Grand_Elf.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Pegasus.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Silver_Pegasus.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Dendroid_Guard.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Dendroid_Soldier.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Unicorn.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_War_Unicorn.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Green_Dragon.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Gold_Dragon.gif" class="img-creature rampart-creature">
+    <img src="css/img/Creature_Gremlin.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Master_Gremlin.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Stone_Gargoyle.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Obsidian_Gargoyle.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Stone_Golem.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Iron_Golem.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Mage.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Arch_Mage.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Genie.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Master_Genie.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Naga.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Naga_Queen.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Giant.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Titan.gif" class="img-creature tower-creature">
+    <img src="css/img/Creature_Imp.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Familiar.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Gog.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Magog.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Hell_Hound.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Cerberus.gif" class="img-creature inferno-creature">
+    <img src="css/img/Creature_Demon.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Horned_Demon.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Pit_Fiend.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Pit_Lord.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Efreet.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Efreet_Sultan.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Devil.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Arch_Devil.gif" class="img-creature inferno-creature">
+      <img src="css/img/Creature_Skeleton.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Skeleton_Warrior.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Walking_Dead.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Zombie.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Wight.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Wraith.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Vampire.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Vampire_Lord.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Lich.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Power_Lich.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Black_Knight.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Dread_Knight.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Bone_Dragon.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Ghost_Dragon.gif" class="img-creature necropolis-creature">
+      <img src="css/img/Creature_Troglodyte.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Infernal_Troglodyte.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Harpy.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Harpy_Hag.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Beholder.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Evil_Eye.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Medusa.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Medusa_Queen.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Minotaur.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Minotaur_King.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Manticore.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Scorpicore.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Red_Dragon.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Black_Dragon.gif" class="img-creature dungeon-creature">
+      <img src="css/img/Creature_Goblin.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Hobgoblin.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Wolf_Rider.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Wolf_Raider.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Orc.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Orc_Chieftain.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Ogre.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Ogre_Mage.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Roc.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Thunderbird.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Cyclops.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Cyclops_King.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Behemoth.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Ancient_Behemoth.gif" class="img-creature stronghold-creature">
+      <img src="css/img/Creature_Gnoll.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Gnoll_Marauder.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Lizardman.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Lizard_Warrior.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Serpent_Fly.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Dragon_Fly.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Basilisk.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Greater_Basilisk.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Gorgon.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Mighty_Gorgon.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Wyvern.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Wyvern_Monarch.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Hydra.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Chaos_Hydra.gif" class="img-creature fortress-creature">
+      <img src="css/img/Creature_Pixie.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Sprite.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Air_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Storm_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Water_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Ice_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Fire_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Energy_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Earth_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Magma_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Psychic_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Magic_Elemental.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Firebird.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Phoenix.gif" class="img-creature conflux-creature">
+      <img src="css/img/Creature_Peasant.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Halfling.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Boar.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Rogue.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Leprechaun.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Mummy.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Nomad.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Sharpshooter.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Satyr.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Steel_Golem.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Troll.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Gold_Golem.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Fangarm.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Diamond_Golem.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Enchanter.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Faerie_Dragon.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Rust_Dragon.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Crystal_Dragon.gif" class="img-creature neutral-creature">
+      <img src="css/img/Creature_Azure_Dragon.gif" class="img-creature neutral-creature">
+   
+   
   </div>
+</div>
   </div>
  
   </div>
