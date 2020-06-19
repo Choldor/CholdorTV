@@ -1,18 +1,4 @@
-const spells = [
-  { name: "Magic Arrow", rate: 10, power: [10, 20, 30] },
-  { name: "Fire Wall", rate: 10, power: [10, 20, 30] },
-  { name: "Fire Ball", rate: 10, power: [15, 30, 60] },
-  { name: "Land Mine", rate: 10, power: [25, 50, 100] },
-  { name: "Armageddon", rate: 50, power: [30, 60, 120] },
-  { name: "Inferno", rate: 10, power: [25, 50, 80] },
-  { name: "Lightning Bolt", rate: 25, power: [10, 20, 30] },
-  { name: "Chain Lightning", rate: 40, power: [25, 50, 100] },
-  { name: "Ice Bolt", rate: 20, power: [10, 20, 30] },
-  { name: "Frost Ring", rate: 10, power: [15, 30, 60] },
-  { name: "Death Ripple", rate: 5, power: [10, 20, 30] },
-  { name: "Meteor Shower", rate: 25, power: [25, 50, 100] },
-  { name: "Implosion", rate: 75, power: [100, 200, 300] },
-];
+import {spells} from "./constans.js"
 const magicLvl = document.querySelector(".magic-lvl");
 const magic = document.querySelector(".magic");
 const magicLvlCointainer = document.querySelector(".magic-lvl-container");
@@ -21,9 +7,6 @@ const spellpower = document.querySelector(".spellpower");
 const spell = document.querySelector(".spell");
 const finalButton = document.querySelector(".final-button");
 const result = document.querySelector(".result");
-console.log(spellpower);
-console.log(spell);
-console.log(magic.checked);
 
 const calculateValue = () => {
   const spellObj = spells.find((el) => el.name === spell.value);
@@ -49,6 +32,7 @@ const toggleMagicLvl = () => {
     magicLvlCointainer.classList.remove("hide");
   }
 };
+console.log(spells)
 finalButton.addEventListener("click", calculateValue);
 magic.addEventListener("change", toggleMagicLvl);
 
@@ -102,6 +86,7 @@ allSpells.forEach((spell) =>
 );
 
 const allCreatures = document.querySelectorAll(".img-creature");
+const allTowns = document.querySelectorAll(".town-img");
 const castleCreatures = document.querySelectorAll(".castle-creature");
 const rampartCreatures = document.querySelectorAll(".rampart-creature")
 const towerCreatures = document.querySelectorAll(".tower-creature")
@@ -124,112 +109,130 @@ const townFortress = document.querySelector(".fortress");
 const townConflux = document.querySelector(".conflux");
 const townCove = document.querySelector(".cove");
 const townNeutral = document.querySelector(".neutral");
+
+const removeClassFromTowns = () => {
+  allTowns.forEach(town => town.classList.remove('town-active'))
+  }
+const removeClassFromCreatures = () => {
+  allCreatures.forEach(creature => creature.classList.remove('creatures-active'))
+} 
 const showCastle = () => {
+  removeClassFromTowns()
+  townCastle.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  castleCreatures.forEach(
-    (castleCreatures) => (castleCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    castleCreatures.forEach(
+    (castleCreatures) => (castleCreatures.classList.add('creature-active')));
 };
+const showCreature = (creature) => {
+  removeClassFromCreatures()
+  allCreatures.forEach(
+    (creature) => (creature.classList.remove('creatures-active'))
+  )
+  creature.classList.add('creatures-active') 
+}
+
+allCreatures.forEach(creature => creature.addEventListener("click",() => showCreature(creature)))
 townCastle.addEventListener("click", showCastle);
 
 const showRampart = () => {
+  removeClassFromTowns()
+  townRampart.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  rampartCreatures.forEach(
-    (rampartCreatures) => (rampartCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    rampartCreatures.forEach(
+    (rampartCreatures) => (rampartCreatures.classList.add('creature-active')));
 };
 townRampart.addEventListener("click", showRampart);
 
 const showTower = () => {
+  removeClassFromTowns()
+  townTower.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  towerCreatures.forEach(
-    (towerCreatures) => (towerCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    towerCreatures.forEach(
+    (towerCreatures) => (towerCreatures.classList.add('creature-active')));
 };
 townTower.addEventListener("click", showTower);
 
 const showInferno = () => {
+  removeClassFromTowns()
+  townInferno.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  infernoCreatures.forEach(
-    (infernoCreatures) => (infernoCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    infernoCreatures.forEach(
+    (infernoCreatures) => (infernoCreatures.classList.add('creature-active')));
 };
 townInferno.addEventListener("click", showInferno);
 
 const showNecropolis = () => {
+  removeClassFromTowns()
+  townNecropolis.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  necropolisCreatures.forEach(
-    (necropolisCreatures) => (necropolisCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    necropolisCreatures.forEach(
+    (necropolisCreatures) => (necropolisCreatures.classList.add('creature-active')));
 };
 townNecropolis.addEventListener("click", showNecropolis);
 
 const showDungeon = () => {
+  removeClassFromTowns()
+  townDungeon.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  dungeonCreatures.forEach(
-    (dungeonCreatures) => (dungeonCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    dungeonCreatures.forEach(
+    (dungeonCreatures) => (dungeonCreatures.classList.add('creature-active')));
 };
 townDungeon.addEventListener("click", showDungeon);
 
 const showStronghold = () => {
+  removeClassFromTowns()
+  townStronghold.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  strongholdCreatures.forEach(
-    (strongholdCreatures) => (strongholdCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    strongholdCreatures.forEach(
+    (strongholdCreatures) => (strongholdCreatures.classList.add('creature-active')));
 };
 townStronghold.addEventListener("click", showStronghold);
 
 const showFortress = () => {
+  removeClassFromTowns()
+  townFortress.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  fortressCreatures.forEach(
-    (fortressCreatures) => (fortressCreatures.style.display = "inline-flex")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    fortressCreatures.forEach(
+    (fortressCreatures) => (fortressCreatures.classList.add('creature-active')));
 };
 townFortress.addEventListener("click", showFortress);
 
 const showConflux = () => {
+  removeClassFromTowns()
+  townConflux.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
+    (singleCreature) => (singleCreature.classList.remove('creature-active'))
   );
   confluxCreatures.forEach(
-    (confluxCreatures) => (confluxCreatures.style.display = "inline-flex")
-  );
+    (confluxCreatures) => (confluxCreatures.classList.add('creature-active')));
 };
 townConflux.addEventListener("click", showConflux);
 
 const showCove = () => {
-  allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
-  coveCreatures.forEach(
-    (coveCreatures) => (coveCreatures.style.display = "inline-flex")
-  );
+    removeClassFromTowns()
+    townCove.classList.add('town-active')
+    allCreatures.forEach(
+      (singleCreature) => (singleCreature.classList.remove('creature-active')));
+    coveCreatures.forEach(
+      (coveCreatures) => (coveCreatures.classList.add('creature-active')));
 };
 townCove.addEventListener("click", showCove);
 
 const showNeutral = () => {
+  removeClassFromTowns()
+  townNeutral.classList.add('town-active')
   allCreatures.forEach(
-    (singleCreature) => (singleCreature.style.display = "none")
-  );
+    (singleCreature) => (singleCreature.classList.remove('creature-active')));
   neutralCreatures.forEach(
-    (neutralCreatures) => (neutralCreatures.style.display = "inline-flex")
-  );
+    (neutralCreatures) => (neutralCreatures.classList.add('creature-active')));
 };
 townNeutral.addEventListener("click", showNeutral);
+

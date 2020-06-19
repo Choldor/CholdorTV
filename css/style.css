@@ -304,7 +304,7 @@ a.link3 {
   width: 100%;
   display: flex;
   position: relative;
-  background-color: #290c30;
+  background: linear-gradient(90deg, #000000, #3b1455, #000000);
 }
 .calculator-left {
   display: flex;
@@ -330,10 +330,10 @@ a.link3 {
   
 }
 .magic-select {
-  display: flex;
-justify-content: center;
+display: flex;
 align-items: center;
 flex-direction: column;
+height: fit-content;
 }
 .img-magic {
   cursor: pointer;
@@ -351,7 +351,7 @@ flex-direction: column;
   width: 100%;
 }
 .calculate {
-  background-color: #00005c;
+  background: linear-gradient(45deg, #000002, #3d0892fc);
   border: 2px solid rgb(121, 28, 28);
   padding: 10px;
   text-align: -webkit-center;
@@ -380,12 +380,17 @@ align-items: center;
 flex-direction: column;  
 }
 .town {
+  background: linear-gradient(45deg, #000002, #3d0892fc);
   width: 170px;
   border: 2px solid rgb(121, 28, 28);
   padding: 5px;
   margin: 10px;
 }
+.town-active {
+  filter: brightness(100%)!important;
+}
 .creature {
+  background: linear-gradient(45deg, #000002, #3d0892fc);
   width: 160px;
   border: 2px solid rgb(121, 28, 28);
   padding: 10px;
@@ -401,9 +406,23 @@ flex-direction: column;
 .img-creature{
   cursor: pointer;
   filter: brightness(40%);
+  display: none;
 }
 .img-creature:hover {
   filter: brightness(100%);
+}
+.creature-active {
+  display: inline-flex;
+}
+.creatures-active {
+  filter: brightness(100%);
+}
+.creature-animation{ 
+  background: linear-gradient(45deg, #000002, #3d0892fc);
+  width: 160px;
+  border: 2px solid rgb(121, 28, 28);
+  padding: 10px;
+  margin: 15px;
 }
 .hide {
 display:none;
