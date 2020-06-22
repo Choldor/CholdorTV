@@ -320,6 +320,7 @@ a.link3 {
   background-repeat: no-repeat;
   padding: 10px 0px 0px 60px;
   width: 450px;
+  max-height: 486px;
 }
 .img-spell{
   cursor: pointer;
@@ -356,6 +357,7 @@ height: fit-content;
   padding: 10px;
   text-align: -webkit-center;
   height: fit-content;
+
 }
 .spellpower {
   display: block;

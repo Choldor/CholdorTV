@@ -1,9 +1,10 @@
-import {spells} from "./constans.js"
+import {spells} from "./constans.js";
+import {creatures} from "./constans.js";
 const magicLvl = document.querySelector(".magic-lvl");
 const magic = document.querySelector(".magic");
 const magicLvlCointainer = document.querySelector(".magic-lvl-container");
 const spellpower = document.querySelector(".spellpower");
-
+console.log(creatures)
 const spell = document.querySelector(".spell");
 const finalButton = document.querySelector(".final-button");
 const result = document.querySelector(".result");
