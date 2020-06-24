@@ -347,9 +347,13 @@ height: fit-content;
 
 .calculator-right {
   padding: 10px;
-  justify-content: space-around;
-  display: flex;
+  display: block;
   width: 100%;
+}
+.calculator-right-items{
+  justify-content: space-between;
+  display: flex;
+
 }
 .calculate {
   background: linear-gradient(45deg, #000002, #3d0892fc);
@@ -419,12 +423,23 @@ flex-direction: column;
 .creatures-active {
   filter: brightness(100%);
 }
-.creature-animation{ 
-  background: linear-gradient(45deg, #000002, #3d0892fc);
-  width: 160px;
-  border: 2px solid rgb(121, 28, 28);
+.creature-animation-container {
+  display: flex;
+  text-align: center;
+}
+.creature-animation-item-spell {
+  width: 150px;
   padding: 10px;
-  margin: 15px;
+  height: 150px;
+}
+.creature-animation-item {
+  width: 150px;
+  padding: 10px;
+  height: 150px;
+  margin: 0px;
+}
+.creature-animation{ 
+  transform: scaleX(-1);
 }
 .hide {
 display:none;

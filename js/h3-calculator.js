@@ -1,10 +1,8 @@
-import {spells} from "./constans.js";
-import {creatures} from "./constans.js";
+import {spells, creatures} from "./constans.js";
 const magicLvl = document.querySelector(".magic-lvl");
 const magic = document.querySelector(".magic");
 const magicLvlCointainer = document.querySelector(".magic-lvl-container");
 const spellpower = document.querySelector(".spellpower");
-console.log(creatures)
 const spell = document.querySelector(".spell");
 const finalButton = document.querySelector(".final-button");
 const result = document.querySelector(".result");
@@ -82,7 +80,7 @@ magicAll.addEventListener("click", showAll);
 
 allSpells.forEach((spell) =>
   spell.addEventListener("click", () => {
-    console.log(spell.dataset.spellName);
+    console.log(spell.dataset.spellName, spell.src);
   })
 );
 
@@ -110,6 +108,7 @@ const townFortress = document.querySelector(".fortress");
 const townConflux = document.querySelector(".conflux");
 const townCove = document.querySelector(".cove");
 const townNeutral = document.querySelector(".neutral");
+const creatureAnimation = document.querySelector(".creature-animation")
 
 const removeClassFromTowns = () => {
   allTowns.forEach(town => town.classList.remove('town-active'))
@@ -130,8 +129,14 @@ const showCreature = (creature) => {
   allCreatures.forEach(
     (creature) => (creature.classList.remove('creatures-active'))
   )
-  creature.classList.add('creatures-active') 
+  creature.classList.add('creatures-active')
+  const getCreatureUrl = creatures.find(({name}) => name === creature.dataset.creatureName).imgUrl;
+  const getCreatureHealth = creatures.find(({name}) => name === creature.dataset.creatureName)["health"];
+  console.log(creature.dataset.creatureName, getCreatureUrl, getCreatureHealth)
+  console.log(creatureAnimation)
+  creatureAnimation.src=getCreatureUrl
 }
+
 
 allCreatures.forEach(creature => creature.addEventListener("click",() => showCreature(creature)))
 townCastle.addEventListener("click", showCastle);
