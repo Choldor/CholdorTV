@@ -374,8 +374,9 @@ height: fit-content;
   width: 50px;
   cursor: pointer;
 }
-.left-img:hover{
-  filter: brightness(50%);
+.magic-img-active {
+  filter:brightness(40%) ;
+  transition: 0.3s;
 }
 .left-img-spellpower {
   width: 50px;
@@ -426,14 +427,21 @@ flex-direction: column;
 .creature-animation-container {
   display: flex;
   text-align: center;
+  justify-content: space-around;
 }
 .creature-animation-item-spell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   padding: 10px;
   height: 150px;
 }
 .creature-animation-item {
   width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   height: 150px;
   margin: 0px;
@@ -441,6 +449,26 @@ flex-direction: column;
 .creature-animation{ 
   transform: scaleX(-1);
 }
+.img-vs {
+  width: 100px;
+  height: 100px;
+}
+.protection-spells {
+ 
+}
+.protection-spells-items {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 5px;
+}
+.protection-spells-checkbox {
+
+}
+.protection-spells-checkbox-label {
+  font-size: 10px;
+}
+
 .hide {
 display:none;
 }

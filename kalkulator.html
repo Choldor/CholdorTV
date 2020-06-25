@@ -44,14 +44,10 @@
       <div class="calculator-left">
       <div class="book-magic">
         <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth" >
-        <img data-spell-name="Protection Fire" src="css/img/32_protectionfire.gif" class="img-spell fire">
-        <img data-spell-name="Protection water" src="css/img/33_protectionwater.gif" class="img-spell water">
-        <img data-spell-name="Protection Earth" src="css/img/34_protectionearth.gif" class="img-spell earth">
         <img data-spell-name="Death Ripple" src="css/img/25_deathripple.gif" class="img-spell earth">
         <img data-spell-name="Fire Wall" src="css/img/14_firewall.gif" class="img-spell fire">
         <img data-spell-name="Ice Bolt" src="css/img/17_icebolt.gif" class="img-spell water">
         <img data-spell-name="Lightning Bolt" src="css/img/18_lightningbolt.gif" class="img-spell air">
-        <img data-spell-name="Protection Air" src="css/img/31_protectionair.gif" class="img-spell air">
         <img data-spell-name="Fire Ball" src="css/img/22_fireball.gif" class="img-spell fire">
         <img data-spell-name="Frost Ring" src="css/img/21_frostring.gif" class="img-spell water">
         <img data-spell-name="Land Mine" src="css/img/12_landmine.gif" class="img-spell fire">
@@ -102,9 +98,9 @@
       <input type="checkbox" class="magic">
       </input>
       <div class="hide magic-lvl-container">
-    <img src="css/img/Basic_Sorcery.png" class="left-img">
-    <img src="css/img/Advanced_Sorcery.png" class="left-img">
-    <img src="css/img/Expert_Sorcery.png" class="left-img">
+    <img src="css/img/Basic_Sorcery.png" class="left-img basic-magic">
+    <img src="css/img/Advanced_Sorcery.png" class="left-img advanced_magic">
+    <img src="css/img/Expert_Sorcery.png" class="left-img expert_magic">
       </div>
       
       <div>
@@ -114,15 +110,39 @@
         <img src="css/img/Artifact_Orb_of_the_Firmament.gif">
       </div>
       <div>
-      <input type="checkbox" class="orb air"></input>
-      <input type="checkbox" class="orb earth"></input>
-      <input type="checkbox" class="orb fire"></input>
-      <input type="checkbox" class="orb water"></input>
+      <input type="checkbox" class="orb orb-air"></input>
+      <input type="checkbox" class="orb orb-earth"></input>
+      <input type="checkbox" class="orb orb-fire"></input>
+      <input type="checkbox" class="orb orb-water"></input>
       </div>
       <button class="final-button">Oblicz</button>
       <h2 id="result" class="result"></h2>
     </div>
-
+    <div class="protection-spells">
+    <div class="protection-spells-checkbox">
+    <label class="protection-spells-checkbox-label">Protection</label><label class="protection-spells-checkbox-label">Basic Adv/Expert</label>
+    </div>
+     <div class="protection-spells-items">
+      <img data-spell-name="Protection Air" src="css/img/31_protectionair.gif" class="img-spell air">
+      <input type="radio"></input>
+      <input type="radio"></input>
+    </div> 
+      <div class="protection-spells-items">
+      <img data-spell-name="Protection Earth" src="css/img/34_protectionearth.gif" class="img-spell earth">
+      <input type="radio"></input>
+      <input type="radio"></input>
+    </div> 
+    <div class="protection-spells-items">
+      <img data-spell-name="Protection Fire" src="css/img/32_protectionfire.gif" class="img-spell fire">
+      <input type="radio"></input>
+      <input type="radio"></input>
+    </div>
+    <div class="protection-spells-items">
+      <img data-spell-name="Protection water" src="css/img/33_protectionwater.gif" class="img-spell water">
+      <input type="radio"></input>
+      <input type="radio"></input>
+    </div>
+  </div>
     <div class="town-creature">
     <div class="town">
 <img src="css/img/Town_Castle.gif" class="town-img  castle town-active">
@@ -300,22 +320,23 @@
       <img data-creature-name="Azure_Dragon" src="css/img/Creature_Azure_Dragon.gif" class="img-creature neutral-creature">
   </div>
 </div>
-</div>
+        </div>
 <div class="creature-animation-container">
   <div class="creature-animation-item-spell">
-   <img src="css/img/03_magicarrow.gif">
+   <img class="change-img" src="css/img/03_magicarrow.gif">
   </div>
   <div class="creature-animation-item-vs">
-    <img src="css/img/vs.png">
+    <img class="img-vs" src="css/img/vs.png">
   </div>
   <div class="creature-animation-item">
     <img class="creature-animation" src="css/img/creatures_animation/Creature_Pikeman_Animation.gif">
   </div>
+    </div>
+  <div>
+    Magic Arrow 10x10 = 20 kill 2 Pikeman
   </div>
+</div> 
 </div>
-  
- 
-  </div>
     <footer class="down-line">
       <div class="footer-items">
         <div class="footer-column">

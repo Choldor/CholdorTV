@@ -6,6 +6,15 @@ const spellpower = document.querySelector(".spellpower");
 const spell = document.querySelector(".spell");
 const finalButton = document.querySelector(".final-button");
 const result = document.querySelector(".result");
+const magicLvLImg = document.querySelectorAll(".left-img");
+const basicMagic = document.querySelector(".basic-magic");
+const advanedMagic = document.querySelector(".advanced_magic");
+const expertMagic = document.querySelector(".expert_magic");
+const orbAir = document.querySelector(".orb-air")
+const orbEarth = document.querySelector(".orb-earth")
+const orbFire = document.querySelector(".orb-fire")
+const orbWater = document.querySelector(".orb-water")
+console.log(orbAir)
 
 const calculateValue = () => {
   const spellObj = spells.find((el) => el.name === spell.value);
@@ -25,13 +34,33 @@ const calculateValue = () => {
   );
 };
 const toggleMagicLvl = () => {
-  if (magic.checked === false) {
-    magicLvlCointainer.classList.add("hide");
-  } else {
+if (magic.checked === false) {
+  magicLvlCointainer.classList.add("hide");
+  removeClassFromMagicLvl()
+ } else {
     magicLvlCointainer.classList.remove("hide");
+ }
+ };
+const removeClassFromMagicLvl = () => {
+  magicLvLImg.forEach(magicLvlImg => magicLvlImg.classList.remove('magic-img-active'))
   }
+const showBasicMagic = () => {
+  removeClassFromMagicLvl()
+  basicMagic.classList.add('magic-img-active')
+
 };
-console.log(spells)
+const showAdvancedMagic = () => {
+  removeClassFromMagicLvl()
+  advanedMagic.classList.add('magic-img-active')
+};
+const showExpertMagic = () => {
+  removeClassFromMagicLvl()
+  expertMagic.classList.add('magic-img-active')
+};
+basicMagic.addEventListener("click", showBasicMagic
+);
+advanedMagic.addEventListener("click", showAdvancedMagic);
+expertMagic.addEventListener("click", showExpertMagic);
 finalButton.addEventListener("click", calculateValue);
 magic.addEventListener("change", toggleMagicLvl);
 
@@ -45,6 +74,7 @@ const magicAir = document.querySelector(".magic-air");
 const magicEarth = document.querySelector(".magic-earth");
 const magicWater = document.querySelector(".magic-water");
 const magicAll = document.querySelector(".magic-all");
+const changeImg = document.querySelector(".change-img");
 
 const showFire = () => {
   allSpells.forEach((singleSpell) => (singleSpell.style.display = "none"));
@@ -80,7 +110,8 @@ magicAll.addEventListener("click", showAll);
 
 allSpells.forEach((spell) =>
   spell.addEventListener("click", () => {
-    console.log(spell.dataset.spellName, spell.src);
+    console.log(changeImg);
+    changeImg.src=spell.src;
   })
 );
 
