@@ -217,7 +217,6 @@ a.link {
 footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   font-size: 15px;
   bottom: 0;
   height: 60px;
@@ -363,9 +362,8 @@ height: fit-content;
   height: fit-content;
 
 }
-.spellpower {
-  display: block;
-  padding: 1px;
+.spell-power {
+  padding: 5px;
 }
 .orb{
   margin: 0px 16px 0px 15px;
@@ -437,6 +435,11 @@ flex-direction: column;
   padding: 10px;
   height: 150px;
 }
+.creature-animation-item-vs{
+  display: flex;
+  align-items: center;
+ justify-content: center;
+}
 .creature-animation-item {
   width: 150px;
   display: flex;
@@ -469,8 +472,11 @@ flex-direction: column;
   font-size: 10px;
 }
 
-.hide {
+.hide-magic {
 display:none;
+}
+.hide-protection {
+  display:none;
 }
 @media (max-width: 768px) {
   .container {

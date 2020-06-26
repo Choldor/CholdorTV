@@ -43,7 +43,7 @@
     <div class="calculator">
       <div class="calculator-left">
       <div class="book-magic">
-        <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth" >
+        <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth active-spell" >
         <img data-spell-name="Death Ripple" src="css/img/25_deathripple.gif" class="img-spell earth">
         <img data-spell-name="Fire Wall" src="css/img/14_firewall.gif" class="img-spell fire">
         <img data-spell-name="Ice Bolt" src="css/img/17_icebolt.gif" class="img-spell water">
@@ -89,20 +89,24 @@
         <option value="inferno">Xyron</option>
       </select>
     </div>
-      <div class="spellpower">
+      <div class="spell-power">
         <label for="spellPower">
           <img src="css/img/Power_skill.png" class="left-img-spellpower">
         </label>
-      <input name="spellPower" type="number" min="1" max="99" id="value" class="spellpower"></div>
+      <input name="spellPower" type="number" min="1" max="99" id="value" class="spell-power-values">
+    </div>
       <label for="magic">Magic:</label>
       <input type="checkbox" class="magic">
       </input>
-      <div class="hide magic-lvl-container">
+      <div class="hide-magic magic-lvl-container">
     <img src="css/img/Basic_Sorcery.png" class="left-img basic-magic">
     <img src="css/img/Advanced_Sorcery.png" class="left-img advanced_magic">
     <img src="css/img/Expert_Sorcery.png" class="left-img expert_magic">
       </div>
-      
+      <div>
+        <label for="magic">Protection:</label>
+      <input type="checkbox" class="protection">
+      </div>
       <div>
         <img src="css/img/Artifact_Orb_of_Driving_Rain.gif">
         <img src="css/img/Artifact_Orb_of_Silt.gif">
@@ -116,31 +120,34 @@
       <input type="checkbox" class="orb orb-water"></input>
       </div>
       <button class="final-button">Oblicz</button>
-      <h2 id="result" class="result"></h2>
     </div>
-    <div class="protection-spells">
+    <div class="hide-protection protection-spells">
     <div class="protection-spells-checkbox">
-    <label class="protection-spells-checkbox-label">Protection</label><label class="protection-spells-checkbox-label">Basic Adv/Expert</label>
+    <label class="protection-spells-checkbox-label">Protection None Basic Adv/Expert</label>
     </div>
      <div class="protection-spells-items">
       <img data-spell-name="Protection Air" src="css/img/31_protectionair.gif" class="img-spell air">
-      <input type="radio"></input>
-      <input type="radio"></input>
+      <input type="radio" id="brak" name="air" value="0"></input>
+      <input type="radio" id="basic" name="air" value="50"></input>
+      <input type="radio" id="adv/expert" name="air" value="75"></input>
     </div> 
       <div class="protection-spells-items">
       <img data-spell-name="Protection Earth" src="css/img/34_protectionearth.gif" class="img-spell earth">
-      <input type="radio"></input>
-      <input type="radio"></input>
+      <input type="radio" id="brak" name="earth" value="0"></input>
+      <input type="radio" id="basic" name="earth" value="50"></input>
+      <input type="radio" id="adv/expert" name="earth" value="75"></input>
     </div> 
     <div class="protection-spells-items">
       <img data-spell-name="Protection Fire" src="css/img/32_protectionfire.gif" class="img-spell fire">
-      <input type="radio"></input>
-      <input type="radio"></input>
+      <input type="radio" id="brak" name="fire" value="0"></input>
+      <input type="radio" id="basic" name="fire" value="50"></input>
+      <input type="radio" id="adv/expert" name="fire" value="75"></input>
     </div>
     <div class="protection-spells-items">
       <img data-spell-name="Protection water" src="css/img/33_protectionwater.gif" class="img-spell water">
-      <input type="radio"></input>
-      <input type="radio"></input>
+      <input type="radio" id="brak" name="water" value="0"></input>
+      <input type="radio" id="basic" name="water" value="50"></input>
+      <input type="radio" id="adv/expert" name="water" value="75"></input>
     </div>
   </div>
     <div class="town-creature">
@@ -333,7 +340,7 @@
   </div>
     </div>
   <div>
-    Magic Arrow 10x10 = 20 kill 2 Pikeman
+    <h2 id="result" class="result">Magic Arrow 10x10 = 20 kill 2 Pikeman</h2>
   </div>
 </div> 
 </div>

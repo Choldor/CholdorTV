@@ -2,7 +2,7 @@ import {spells, creatures} from "./constans.js";
 const magicLvl = document.querySelector(".magic-lvl");
 const magic = document.querySelector(".magic");
 const magicLvlCointainer = document.querySelector(".magic-lvl-container");
-const spellpower = document.querySelector(".spellpower");
+const spellpower = document.querySelector(".spell-power-values");
 const spell = document.querySelector(".spell");
 const finalButton = document.querySelector(".final-button");
 const result = document.querySelector(".result");
@@ -10,37 +10,47 @@ const magicLvLImg = document.querySelectorAll(".left-img");
 const basicMagic = document.querySelector(".basic-magic");
 const advanedMagic = document.querySelector(".advanced_magic");
 const expertMagic = document.querySelector(".expert_magic");
-const orbAir = document.querySelector(".orb-air")
-const orbEarth = document.querySelector(".orb-earth")
-const orbFire = document.querySelector(".orb-fire")
-const orbWater = document.querySelector(".orb-water")
+const orbAir = document.querySelector(".orb-air");
+const orbEarth = document.querySelector(".orb-earth");
+const orbFire = document.querySelector(".orb-fire");
+const orbWater = document.querySelector(".orb-water");
+const protectionSpellsContainer = document.querySelector(".protection-spells");
+const protection = document.querySelector(".protection");
 console.log(orbAir)
 
-const calculateValue = () => {
-  const spellObj = spells.find((el) => el.name === spell.value);
-  const spellRate = parseInt(spellObj.rate);
-  let finalValue;
-  if (magic.checked === false) {
-    finalValue = spellRate * parseInt(spellpower.value) + spellObj.power[0];
-  } else {
-    finalValue =
-      spellRate * parseInt(spellpower.value) +
-      spellObj.power[parseInt(magicLvl.value) - 1];
-  }
-  console.log(parseInt(spellObj.rate));
-  result.innerHTML = finalValue;
-  console.log(
-    spellRate * parseInt(spellpower.value) + parseInt(magicLvl.value)
-  );
-};
+// const calculateValue = () => {
+  // const spellObj = spells.find((el) => el.name === spell.value);
+  // const spellRate = parseInt(spellObj.rate);
+  // let finalValue = spellRate * parseInt(spellpower.value)
+
+  // if (magic.checked === false) {
+    // finalValue = spellRate * parseInt(spellpower.value) + spellObj.power[0];
+  // } else {
+    // finalValue =
+      // spellRate * parseInt(spellpower.value) +
+      // spellObj.power[parseInt(magicLvl.value) - 1];
+  // }
+  // console.log(parseInt(spellObj.rate));
+  // result.innerHTML = finalValue;
+  // console.log(
+    // spellRate * parseInt(spellpower.value)
+  // );
+// };
 const toggleMagicLvl = () => {
 if (magic.checked === false) {
-  magicLvlCointainer.classList.add("hide");
+  magicLvlCointainer.classList.add("hide-magic");
   removeClassFromMagicLvl()
  } else {
-    magicLvlCointainer.classList.remove("hide");
+    magicLvlCointainer.classList.remove("hide-magic");
  }
  };
+ const toggleProtectionSpells = () => {
+  if (protection.checked === false) {
+    protectionSpellsContainer.classList.add("hide-protection");
+   } else {
+    protectionSpellsContainer.classList.remove("hide-protection");
+   }
+   };
 const removeClassFromMagicLvl = () => {
   magicLvLImg.forEach(magicLvlImg => magicLvlImg.classList.remove('magic-img-active'))
   }
@@ -61,8 +71,8 @@ basicMagic.addEventListener("click", showBasicMagic
 );
 advanedMagic.addEventListener("click", showAdvancedMagic);
 expertMagic.addEventListener("click", showExpertMagic);
-finalButton.addEventListener("click", calculateValue);
 magic.addEventListener("change", toggleMagicLvl);
+protection.addEventListener("change", toggleProtectionSpells);
 
 const allSpells = document.querySelectorAll(".img-spell");
 const fire = document.querySelectorAll(".fire");
@@ -107,13 +117,30 @@ const showAll = () => {
 };
 magicAll.addEventListener("click", showAll);
 
-
+const removeClassFromSpells = () => {
+  allSpells.forEach(spell => spell.classList.remove('active-spell')) 
+}
 allSpells.forEach((spell) =>
   spell.addEventListener("click", () => {
+    removeClassFromSpells()    
     console.log(changeImg);
     changeImg.src=spell.src;
+    spell.classList.add('active-spell')
   })
 );
+
+const calculateValue = () => {
+ const clickedSpellName = document.querySelector('.active-spell').dataset.spellName
+  const clickedSpellProperties = spells.find(el => el.name === clickedSpellName)
+  const finalValue = clickedSpellProperties.rate * parseInt(spellpower.value)
+  result.innerHTML = finalValue;
+}
+finalButton.addEventListener("click", calculateValue)
+console.log(basicMagic)
+
+
+
+
 
 const allCreatures = document.querySelectorAll(".img-creature");
 const allTowns = document.querySelectorAll(".town-img");
