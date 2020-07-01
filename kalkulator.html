@@ -43,7 +43,7 @@
     <div class="calculator">
       <div class="calculator-left">
       <div class="book-magic">
-        <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell all  air fire  water earth active-spell" >
+        <img data-spell-name="Magic Arrow" src="css/img/03_magicarrow.gif" class="img-spell air active-spell" >
         <img data-spell-name="Death Ripple" src="css/img/25_deathripple.gif" class="img-spell earth">
         <img data-spell-name="Fire Wall" src="css/img/14_firewall.gif" class="img-spell fire">
         <img data-spell-name="Ice Bolt" src="css/img/17_icebolt.gif" class="img-spell water">
@@ -95,13 +95,30 @@
         </label>
       <input name="spellPower" type="number" min="1" max="99" id="value" class="spell-power-values">
     </div>
-      <label for="magic">Magic:</label>
-      <input type="checkbox" class="magic">
+    <div>
+      <label for="magic">Magic Lvl:</label>
+      <div class="magic-lvl-container">
+      <img src="css/img/Magic_EarthMagicBasic.png" class="magic-lvl-img magic-lvl-earth">
+      <img src="css/img/Magic_EarthMagicAdvanced.png" class="magic-lvl-img magic-lvl-earth">
+      <img src="css/img/Magic_EarthMagicExpert.png"class="magic-lvl-img magic-lvl-earth">
+      <img src="css/img/Magic_AirMagicBasic.png"class="magic-lvl-img magic-lvl-air magic-lvl-active  magic-lvl-img-active">
+      <img src="css/img/Magic_AirMagicAdvanced.png"class="magic-lvl-img magic-lvl-air magic-lvl-active">
+      <img src="css/img/Magic_AirMagicExpert.png"class="magic-lvl-img magic-lvl-air magic-lvl-active">
+      <img src="css/img/Magic_FireMagicBasic.png"class="magic-lvl-img magic-lvl-fire">
+      <img src="css/img/Magic_FireMagicAdvanced.png"class="magic-lvl-img magic-lvl-fire">
+      <img src="css/img/Magic_FireMagicExpert.png"class="magic-lvl-img magic-lvl-fire">
+      <img src="css/img/Magic_WaterMagicBasic.png"class="magic-lvl-img magic-lvl-water">
+      <img src="css/img/Magic_WaterMagicAdvanced.png"class="magic-lvl-img magic-lvl-water">
+      <img src="css/img/Magic_WaterMagicExpert.png"class="magic-lvl-img magic-lvl-water">
+      </div>
+    </div>
+      <label for="magic">Magic Skill:</label>
+      <input type="checkbox" class="magic-skill">
       </input>
-      <div class="hide-magic magic-lvl-container">
-    <img src="css/img/Basic_Sorcery.png" class="left-img basic-magic">
-    <img src="css/img/Advanced_Sorcery.png" class="left-img advanced_magic">
-    <img src="css/img/Expert_Sorcery.png" class="left-img expert_magic">
+      <div class="hide-magic-skill magic-skill-container">
+    <img data-skill-name="basic" src="css/img/Basic_Sorcery.png" class="left-img basic-magic">
+    <img data-skill-name="advanced" src="css/img/Advanced_Sorcery.png" class="left-img advanced-magic">
+    <img data-skill-name="expert" src="css/img/Expert_Sorcery.png" class="left-img expert-magic">
       </div>
       <div>
         <label for="magic">Protection:</label>
@@ -114,10 +131,10 @@
         <img src="css/img/Artifact_Orb_of_the_Firmament.gif">
       </div>
       <div>
-      <input type="checkbox" class="orb orb-air"></input>
-      <input type="checkbox" class="orb orb-earth"></input>
-      <input type="checkbox" class="orb orb-fire"></input>
-      <input type="checkbox" class="orb orb-water"></input>
+      <input data-orb-name="Orb Air" type="checkbox" class="orb orb-air"></input>
+      <input data-orb-name="Orb Earth" type="checkbox" class="orb orb-earth"></input>
+      <input data-orb-name="Orb Fire" type="checkbox" class="orb orb-fire"></input>
+      <input data-orb-name="Orb Water" type="checkbox" class="orb orb-water"></input>
       </div>
       <button class="final-button">Oblicz</button>
     </div>

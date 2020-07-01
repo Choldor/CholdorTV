@@ -1,22 +1,22 @@
 
 export const spells = [
-    { name: "Magic Arrow", rate: 10, power: [10, 20, 30]},
-    { name: "Fire Wall", rate: 10, power: [10, 20, 30]},
-    { name: "Fire Ball", rate: 10, power: [15, 30, 60]},
-    { name: "Land Mine", rate: 10, power: [25, 50, 100]},
-    { name: "Armageddon", rate: 50, power: [30, 60, 120]},
-    { name: "Inferno", rate: 10, power: [25, 50, 80]},
-    { name: "Lightning Bolt", rate: 25, power: [10, 20, 30] },
-    { name: "Chain Lightning", rate: 40, power: [25, 50, 100]},
-    { name: "Ice Bolt", rate: 20, power: [10, 20, 30] },
-    { name: "Frost Ring", rate: 10, power: [15, 30, 60]},
-    { name: "Death Ripple", rate: 5, power: [10, 20, 30]},
-    { name: "Meteor Shower", rate: 25, power: [25, 50, 100]},
-    { name: "Implosion", rate: 75, power: [100, 200, 300]},
-    {name:"Sumon Air Elemental", power: [2, 3, 4]},
-    {name:"Summon Earth Elemental", power: [2, 3, 4]},
-    {name:"Summon Fire Elemental", power: [2, 3, 4]},
-    {name:"summon Water Elemental", power: [2, 3, 4]},
+    { name: "Magic Arrow", rate: 10, power: [10, 20, 30], type:"fire air water earth"},
+    { name: "Fire Wall", rate: 10, power: [10, 20, 30], type:"fire"},
+    { name: "Fire Ball", rate: 10, power: [15, 30, 60], type:"fire"},
+    { name: "Land Mine", rate: 10, power: [25, 50, 100], type:"fire"},
+    { name: "Armageddon", rate: 50, power: [30, 60, 120], type:"fire"},
+    { name: "Inferno", rate: 10, power: [25, 50, 80], type:"fire"},
+    { name: "Lightning Bolt", rate: 25, power: [10, 20, 30], type:"air" },
+    { name: "Chain Lightning", rate: 40, power: [25, 50, 100], type:"air"},
+    { name: "Ice Bolt", rate: 20, power: [10, 20, 30], type:"water" },
+    { name: "Frost Ring", rate: 10, power: [15, 30, 60], type:"water"},
+    { name: "Death Ripple", rate: 5, power: [10, 20, 30], type:"earth"},
+    { name: "Meteor Shower", rate: 25, power: [25, 50, 100], type:"earth"},
+    { name: "Implosion", rate: 75, power: [100, 200, 300], type:"earth"},
+    {name:"Sumon Air Elemental", power: [2, 3, 4], type:"air"},
+    {name:"Summon Earth Elemental", power: [2, 3, 4], type:"earth"},
+    {name:"Summon Fire Elemental", power: [2, 3, 4], type:"fire"},
+    {name:"summon Water Elemental", power: [2, 3, 4], type:"water"},
   ];
   export const creatures = [
     { name: "Pikeman", attack:4, defense:5, mindmg:1, maxdmg:3, health:10, speed:4, type: "normal", imgUrl:"css/img/creatures_animation/Creature_Pikeman_Animation.gif"},
@@ -189,7 +189,28 @@ export const spells = [
     { name: "Rust_Dragon", attack:30, defense:30, mindmg:50, maxdmg:50, health:750, speed:17, type: "normal", imgUrl:"css/img/creatures_animation/Creature_Rust_Dragon_Animation.gif" },
     { name: "Crystal_Dragon", attack:40, defense:40, mindmg:60, maxdmg:75, health:800, speed:16, type: "normal", imgUrl:"css/img/creatures_animation/Creature_Crystal_Dragon_Animation.gif" },
     { name: "Azure_Dragon", attack:50, defense:50, mindmg:70, maxdmg:80, health:1000, speed:19, type: "Lower Dragon", imgUrl:"css/img/creatures_animation/Creature_Azure_Dragon_Animation.gif" },
-
-
-
+]
+export const skill = [
+  { name: "basic", value:0.05 },
+  { name: "advanced", value:0.1 },
+  { name: "expert", value:0.15 },
+]
+export const orb = [
+  {name: "Orb Air", value:0.5},
+  {name: "Orb Earth", value:0.5},
+  {name: "Orb Fire", value:0.5},
+  {name: "Orb Water", value:0.5},
+]
+export const hero = [
+  {name: "Adelaide", value:"Frost Ring"},
+  {name: "Aislinn", value:"Meteor Shower"},
+  {name: "Alagar", value:"Ice Bolt"},
+  {name: "Ciele", value:"Magic Arrow"},
+  {name: "Deemer", value:"Meteor Shower"},
+  {name: "Luna", value:"Fire Wall"},
+  {name: "Manfred", value:"Fire Ball"},
+  {name: "Septienna", value:"Death Ripple"},
+  {name: "Solmyr", value:"Chain Lightning"},
+  {name: "Xarfax", value:"Fire Ball"},
+  {name: "Xyron", value:"Inferno"},
 ]
