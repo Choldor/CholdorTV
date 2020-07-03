@@ -1,4 +1,10 @@
-import { spells, creatures, skill, orb, hero } from "./constans.js";
+import {
+  spells,
+  creatures,
+  skill,
+  orb,
+  protections,
+} from "./constans.js";
 const magicSkill = document.querySelector(".magic-skill");
 const magicSkillCointainer = document.querySelector(".magic-skill-container");
 const spellpower = document.querySelector(".spell-power-values");
@@ -20,6 +26,10 @@ const magicLvlEarth = document.querySelectorAll(".magic-lvl-earth");
 const magicLvlAir = document.querySelectorAll(".magic-lvl-air");
 const magicLvlFire = document.querySelectorAll(".magic-lvl-fire");
 const magicLvlWater = document.querySelectorAll(".magic-lvl-water");
+const basicMagicAir = document.querySelector(".basic-magic-air");
+const basicMagicEarth = document.querySelector(".basic-magic-earth");
+const basicMagicFire = document.querySelector(".basic-magic-fire");
+const basicMagicWater = document.querySelector(".basic-magic-water");
 const allSpells = document.querySelectorAll(".img-spell");
 const fire = document.querySelectorAll(".fire");
 const earth = document.querySelectorAll(".earth");
@@ -31,6 +41,16 @@ const magicEarth = document.querySelector(".magic-earth");
 const magicWater = document.querySelector(".magic-water");
 const magicAll = document.querySelector(".magic-all");
 const changeImg = document.querySelector(".change-img");
+const protectionSpells = document.querySelectorAll(".protection-spell");
+const firstCheckboxAir = document.querySelector(".first-checkbox-air");
+const secondCheckboxAir = document.querySelector(".second-checkbox-air");
+const firstCheckboxEarth = document.querySelector(".first-checkbox-earth");
+const secondCheckboxEarth = document.querySelector(".second-checkbox-earth");
+const firstCheckboxFire = document.querySelector(".first-checkbox-fire");
+const secondCheckboxFire = document.querySelector(".second-checkbox-fire");
+const firstCheckboxWater = document.querySelector(".first-checkbox-water");
+const secondCheckboxWater = document.querySelector(".second-checkbox-water");
+
 // const calculateValue = () => {
 // const spellObj = spells.find((el) => el.name === spell.value);
 // const spellRate = parseInt(spellObj.rate);
@@ -98,36 +118,44 @@ allMagicLvl.forEach((oneMagic) =>
 );
 const showMagicEarth = () => {
   removeClassFromMagic();
+  removeClassFromMagicLvl();
   magicLvlEarth.forEach((oneEarthSkill) =>
     oneEarthSkill.classList.add("magic-lvl-active")
   );
+  basicMagicEarth.classList.add("magic-lvl-img-active");
 };
 
 earth.forEach((oneEarth) => oneEarth.addEventListener("click", showMagicEarth));
 
 const showMagicAir = () => {
   removeClassFromMagic();
+  removeClassFromMagicLvl();
   magicLvlAir.forEach((oneAirSkill) =>
     oneAirSkill.classList.add("magic-lvl-active")
   );
+  basicMagicAir.classList.add("magic-lvl-img-active");
 };
 
 air.forEach((oneAir) => oneAir.addEventListener("click", showMagicAir));
 
 const showMagicFire = () => {
   removeClassFromMagic();
+  removeClassFromMagicLvl();
   magicLvlFire.forEach((oneFireSkill) =>
     oneFireSkill.classList.add("magic-lvl-active")
   );
+  basicMagicFire.classList.add("magic-lvl-img-active");
 };
 
 fire.forEach((oneFire) => oneFire.addEventListener("click", showMagicFire));
 
 const showMagicWater = () => {
   removeClassFromMagic();
+  removeClassFromMagicLvl();
   magicLvlWater.forEach((oneWaterSkill) =>
     oneWaterSkill.classList.add("magic-lvl-active")
   );
+  basicMagicWater.classList.add("magic-lvl-img-active");
 };
 
 water.forEach((oneWater) => oneWater.addEventListener("click", showMagicWater));
@@ -180,7 +208,17 @@ allSpells.forEach((spell) =>
     spell.classList.add("active-spell");
   })
 );
-
+const removeClassFromProtectionSpell = () => {
+  protectionSpells.forEach((protection) =>
+    protection.classList.remove("protection-spell-active")
+  );
+};
+protectionSpells.forEach((protection) =>
+  protection.addEventListener("click", () => {
+    removeClassFromProtectionSpell();
+    protection.classList.add("protection-spell-active");
+  })
+);
 const calculateValue = () => {
   const clickedSpellName = document.querySelector(".active-spell").dataset
     .spellName;
@@ -191,14 +229,35 @@ const calculateValue = () => {
   const clickedOrbActiveProperties = orb.find(
     (el) => el.name === clickedOrbActive
   );
+  let magicLvlValue = 0;
+  if (document.querySelectorAll(".basic.magic-lvl-img-active").length === 1) {
+    magicLvlValue = 0;
+  } else if (
+    document.querySelectorAll(".advanced.magic-lvl-img-active").length === 1
+  ) {
+    magicLvlValue = 1;
+  } else if (
+    document.querySelectorAll(".expert.magic-lvl-img-active").length === 1
+  ) {
+    magicLvlValue = 2;
+  }
+  let protectionValue = 0;
+  if (magicLvlValue === 0) {
+    protectionValue = 0;
+  } else if (magicLvlValue === 1) {
+    protectionValue = 1;
+  } else if (magicLvlValue === 2) {
+    protectionValue = 1;
+  }
+  console.log(protectionValue);
   const basicCalculate =
     clickedSpellProperties.rate * parseInt(spellpower.value) +
-    clickedSpellProperties.power[0];
+    clickedSpellProperties.power[magicLvlValue];
   let finalValue = basicCalculate;
   result.innerHTML = finalValue;
-  if (magic.checked === true) {
-    const clickedSkillLvl = document.querySelector(".magic-img-active").dataset
-      .skillName;
+  if (magicSkill.checked === true) {
+    const clickedSkillLvl = document.querySelector(".magic-skill-img-active")
+      .dataset.skillName;
     const clickedSkillLvlProperties = skill.find(
       (el) => el.name === clickedSkillLvl
     );
@@ -221,19 +280,19 @@ const calculateValue = () => {
   if (
     (orbAir.checked === true &&
       clickedSpellProperties.type === "air" &&
-      magic.checked === true) ||
+      magicSkill.checked === true) ||
     (orbEarth.checked === true &&
       clickedSpellProperties.type === "earth" &&
-      magic.checked) ||
+      magicSkill.checked) ||
     (orbFire.checked === true &&
       clickedSpellProperties.type === "fire" &&
-      magic.checked) ||
+      magicSkill.checked) ||
     (orbWater.checked === true &&
       clickedSpellProperties.type === "water" &&
-      magic.checked)
+      magicSkill.checked)
   ) {
-    const clickedSkillLvl = document.querySelector(".magic-img-active").dataset
-      .skillName;
+    const clickedSkillLvl = document.querySelector(".magic-skill-img-active")
+      .dataset.skillName;
     const clickedSkillLvlProperties = skill.find(
       (el) => el.name === clickedSkillLvl
     );
@@ -244,12 +303,105 @@ const calculateValue = () => {
     finalValue = Math.round(finalValue * 1);
     result.innerHTML = finalValue;
   }
-  if (magic.checked === false || orbAir.checked === false) {
+  if (magicSkill.checked === false || orbAir.checked === false) {
     finalValue = basicCalculate;
+  }
+  if (
+    (protection.checked &&
+      firstCheckboxAir.checked === true &&
+      clickedSpellProperties.type === "air") ||
+    (protection.checked &&
+      firstCheckboxEarth.checked === true &&
+      clickedSpellProperties.type === "earth") ||
+    (protection.checked &&
+      firstCheckboxFire.checked === true &&
+      clickedSpellProperties.type === "fire") ||
+    (protection.checked &&
+      firstCheckboxWater.checked === true &&
+      clickedSpellProperties.type === "water")
+  ) 
+  {
+    finalValue = basicCalculate * 0.5;
+    finalValue = Math.round(finalValue * 1);
+    result.innerHTML = finalValue;
+  }
+  if (
+    (protection.checked &&
+      secondCheckboxAir.checked === true &&
+      clickedSpellProperties.type === "air") ||
+    (protection.checked &&
+      secondCheckboxEarth.checked === true &&
+      clickedSpellProperties.type === "earth") ||
+    (protection.checked &&
+      secondCheckboxFire.checked === true &&
+      clickedSpellProperties.type === "fire") ||
+    (protection.checked &&
+      secondCheckboxWater.checked === true &&
+      clickedSpellProperties.type === "water")
+  ) {
+    finalValue = basicCalculate * 0.25;
+    finalValue = Math.round(finalValue * 1);
+    result.innerHTML = finalValue;
   }
 };
 finalButton.addEventListener("click", calculateValue);
 console.log(basicMagic);
+const firstCheckBoxAirClick = () => {
+  if (firstCheckboxAir.checked === true) {
+    firstCheckboxAir.checked = true;
+    secondCheckboxAir.checked = false;
+  }
+};
+const secondCheckBoxAirClick = () => {
+  if (secondCheckboxAir.checked === true) {
+    firstCheckboxAir.checked = false;
+    secondCheckboxAir.checked = true;
+  }
+};
+const firstCheckBoxEarthClick = () => {
+  if (firstCheckboxEarth.checked === true) {
+    firstCheckboxEarth.checked = true;
+    secondCheckboxEarth.checked = false;
+  }
+};
+const secondCheckBoxEarthClick = () => {
+  if (secondCheckboxEarth.checked === true) {
+    firstCheckboxEarth.checked = false;
+    secondCheckboxEarth.checked = true;
+  }
+};
+const firstCheckBoxFireClick = () => {
+  if (firstCheckboxFire.checked === true) {
+    firstCheckboxFire.checked = true;
+    secondCheckboxFire.checked = false;
+  }
+};
+const secondCheckBoxFireClick = () => {
+  if (secondCheckboxFire.checked === true) {
+    firstCheckboxFire.checked = false;
+    secondCheckboxFire.checked = true;
+  }
+};
+const firstCheckBoxWaterClick = () => {
+  if (firstCheckboxWater.checked === true) {
+    firstCheckboxWater.checked = true;
+    secondCheckboxWater.checked = false;
+  }
+};
+const secondCheckBoxWaterClick = () => {
+  if (secondCheckboxWater.checked === true) {
+    firstCheckboxWater.checked = false;
+    secondCheckboxWater.checked = true;
+  }
+};
+firstCheckboxAir.addEventListener("click", firstCheckBoxAirClick);
+firstCheckboxEarth.addEventListener("click", firstCheckBoxEarthClick);
+firstCheckboxFire.addEventListener("click", firstCheckBoxFireClick);
+firstCheckboxWater.addEventListener("click", firstCheckBoxWaterClick);
+secondCheckboxAir.addEventListener("click", secondCheckBoxAirClick);
+secondCheckboxEarth.addEventListener("click", secondCheckBoxEarthClick);
+secondCheckboxFire.addEventListener("click", secondCheckBoxFireClick);
+secondCheckboxWater.addEventListener("click", secondCheckBoxWaterClick);
 
 const allCreatures = document.querySelectorAll(".img-creature");
 const allTowns = document.querySelectorAll(".town-img");

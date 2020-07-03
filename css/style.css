@@ -475,7 +475,12 @@ flex-direction: column;
 .protection-spells-checkbox-label {
   font-size: 10px;
 }
-
+.protection-spell {
+  cursor: pointer;
+}
+.protection-spell-active {
+  filter: brightness(40%);
+}
 .hide-magic-skill {
 display:none;
 }

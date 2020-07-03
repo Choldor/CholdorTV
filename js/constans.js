@@ -1,6 +1,6 @@
 
 export const spells = [
-    { name: "Magic Arrow", rate: 10, power: [10, 20, 30], type:"fire air water earth"},
+    { name: "Magic Arrow", rate: 10, power: [10, 20, 30], type:"air"},
     { name: "Fire Wall", rate: 10, power: [10, 20, 30], type:"fire"},
     { name: "Fire Ball", rate: 10, power: [15, 30, 60], type:"fire"},
     { name: "Land Mine", rate: 10, power: [25, 50, 100], type:"fire"},
@@ -201,16 +201,22 @@ export const orb = [
   {name: "Orb Fire", value:0.5},
   {name: "Orb Water", value:0.5},
 ]
-export const hero = [
-  {name: "Adelaide", value:"Frost Ring"},
-  {name: "Aislinn", value:"Meteor Shower"},
-  {name: "Alagar", value:"Ice Bolt"},
-  {name: "Ciele", value:"Magic Arrow"},
-  {name: "Deemer", value:"Meteor Shower"},
-  {name: "Luna", value:"Fire Wall"},
-  {name: "Manfred", value:"Fire Ball"},
-  {name: "Septienna", value:"Death Ripple"},
-  {name: "Solmyr", value:"Chain Lightning"},
-  {name: "Xarfax", value:"Fire Ball"},
-  {name: "Xyron", value:"Inferno"},
+// export const hero = [
+//   {name: "Adelaide", value:"Frost Ring"},
+//   {name: "Aislinn", value:"Meteor Shower"},
+//   {name: "Alagar", value:"Ice Bolt"},
+//   {name: "Ciele", value:"Magic Arrow"},
+//   {name: "Deemer", value:"Meteor Shower"},
+//   {name: "Luna", value:"Fire Wall"},
+//   {name: "Manfred", value:"Fire Ball"},
+//   {name: "Septienna", value:"Death Ripple"},
+//   {name: "Solmyr", value:"Chain Lightning"},
+//   {name: "Xarfax", value:"Fire Ball"},
+//   {name: "Xyron", value:"Inferno"},
+// ]
+export const protections = [
+  {name: "Protection Air", value: [0.5, 0.25], type: "air"},
+  {name: "Protection Earth", value: [0.5, 0.25], type: "earth"},
+  {name: "Protection Fire", value: [0.5, 0.25], type: "fire"},
+  {name: "Protection Water", value: [0.5, 0.25], type: "water"},
 ]

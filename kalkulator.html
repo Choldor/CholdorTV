@@ -74,7 +74,7 @@
         <div class="calculator-right-items">
         <div class="calculate">
       <div>
-        <select name="hero" id="hero">
+        <!-- <select name="hero" id="hero">
         <option value="none">Bohater</option>
         <option value="frost-ring">Adelaide</option>
         <option value="meteor-shower">Aislinn</option>
@@ -87,7 +87,7 @@
         <option value="chain-lightning">Solmyr</option>
         <option value="fireball">Xarfax</option>
         <option value="inferno">Xyron</option>
-      </select>
+      </select> -->
     </div>
       <div class="spell-power">
         <label for="spellPower">
@@ -98,18 +98,18 @@
     <div>
       <label for="magic">Magic Lvl:</label>
       <div class="magic-lvl-container">
-      <img src="css/img/Magic_EarthMagicBasic.png" class="magic-lvl-img magic-lvl-earth">
-      <img src="css/img/Magic_EarthMagicAdvanced.png" class="magic-lvl-img magic-lvl-earth">
-      <img src="css/img/Magic_EarthMagicExpert.png"class="magic-lvl-img magic-lvl-earth">
-      <img src="css/img/Magic_AirMagicBasic.png"class="magic-lvl-img magic-lvl-air magic-lvl-active  magic-lvl-img-active">
-      <img src="css/img/Magic_AirMagicAdvanced.png"class="magic-lvl-img magic-lvl-air magic-lvl-active">
-      <img src="css/img/Magic_AirMagicExpert.png"class="magic-lvl-img magic-lvl-air magic-lvl-active">
-      <img src="css/img/Magic_FireMagicBasic.png"class="magic-lvl-img magic-lvl-fire">
-      <img src="css/img/Magic_FireMagicAdvanced.png"class="magic-lvl-img magic-lvl-fire">
-      <img src="css/img/Magic_FireMagicExpert.png"class="magic-lvl-img magic-lvl-fire">
-      <img src="css/img/Magic_WaterMagicBasic.png"class="magic-lvl-img magic-lvl-water">
-      <img src="css/img/Magic_WaterMagicAdvanced.png"class="magic-lvl-img magic-lvl-water">
-      <img src="css/img/Magic_WaterMagicExpert.png"class="magic-lvl-img magic-lvl-water">
+      <img src="css/img/Magic_EarthMagicBasic.png" class="magic-lvl-img magic-lvl-earth basic basic-magic-earth">
+      <img src="css/img/Magic_EarthMagicAdvanced.png" class="magic-lvl-img magic-lvl-earth advanced">
+      <img src="css/img/Magic_EarthMagicExpert.png"class="magic-lvl-img magic-lvl-earth expert">
+      <img src="css/img/Magic_AirMagicBasic.png"class="magic-lvl-img magic-lvl-air magic-lvl-active  magic-lvl-img-active basic basic-magic-air">
+      <img src="css/img/Magic_AirMagicAdvanced.png"class="magic-lvl-img magic-lvl-air magic-lvl-active advanced">
+      <img src="css/img/Magic_AirMagicExpert.png"class="magic-lvl-img magic-lvl-air magic-lvl-active expert">
+      <img src="css/img/Magic_FireMagicBasic.png"class="magic-lvl-img magic-lvl-fire basic basic-magic-fire">
+      <img src="css/img/Magic_FireMagicAdvanced.png"class="magic-lvl-img magic-lvl-fire advanced">
+      <img src="css/img/Magic_FireMagicExpert.png"class="magic-lvl-img magic-lvl-fire expert">
+      <img src="css/img/Magic_WaterMagicBasic.png"class="magic-lvl-img magic-lvl-water basic basic-magic-water">
+      <img src="css/img/Magic_WaterMagicAdvanced.png"class="magic-lvl-img magic-lvl-water advanced">
+      <img src="css/img/Magic_WaterMagicExpert.png"class="magic-lvl-img magic-lvl-water expert">
       </div>
     </div>
       <label for="magic">Magic Skill:</label>
@@ -140,31 +140,27 @@
     </div>
     <div class="hide-protection protection-spells">
     <div class="protection-spells-checkbox">
-    <label class="protection-spells-checkbox-label">Protection None Basic Adv/Expert</label>
+    <label class="protection-spells-checkbox-label">Protection</label>
     </div>
      <div class="protection-spells-items">
-      <img data-spell-name="Protection Air" src="css/img/31_protectionair.gif" class="img-spell air">
-      <input type="radio" id="brak" name="air" value="0"></input>
-      <input type="radio" id="basic" name="air" value="50"></input>
-      <input type="radio" id="adv/expert" name="air" value="75"></input>
+      <img data-protections-name="Protection Air" class="protection-spell" src="css/img/31_protectionair.gif" >
+      <input type="checkbox" class="first-checkbox-air"> </input>
+      <input type="checkbox" class="second-checkbox-air"> </input>
     </div> 
       <div class="protection-spells-items">
-      <img data-spell-name="Protection Earth" src="css/img/34_protectionearth.gif" class="img-spell earth">
-      <input type="radio" id="brak" name="earth" value="0"></input>
-      <input type="radio" id="basic" name="earth" value="50"></input>
-      <input type="radio" id="adv/expert" name="earth" value="75"></input>
+      <img data-protections-name="Protection Earth" class="protection-spell" src="css/img/34_protectionearth.gif">
+      <input type="checkbox" class="first-checkbox-earth"></input>
+      <input type="checkbox" class="second-checkbox-earth"> </input>
     </div> 
     <div class="protection-spells-items">
-      <img data-spell-name="Protection Fire" src="css/img/32_protectionfire.gif" class="img-spell fire">
-      <input type="radio" id="brak" name="fire" value="0"></input>
-      <input type="radio" id="basic" name="fire" value="50"></input>
-      <input type="radio" id="adv/expert" name="fire" value="75"></input>
+      <img data-protections-name="Protection Fire" class="protection-spell" src="css/img/32_protectionfire.gif" >
+      <input type="checkbox" class="first-checkbox-fire"> </input>
+      <input type="checkbox" class="second-checkbox-fire"> </input>
     </div>
     <div class="protection-spells-items">
-      <img data-spell-name="Protection water" src="css/img/33_protectionwater.gif" class="img-spell water">
-      <input type="radio" id="brak" name="water" value="0"></input>
-      <input type="radio" id="basic" name="water" value="50"></input>
-      <input type="radio" id="adv/expert" name="water" value="75"></input>
+      <img data-protections-name="Protection Water" class="protection-spell" src="css/img/33_protectionwater.gif">
+      <input type="checkbox" class="first-checkbox-water"> </input>
+      <input type="checkbox" class="second-checkbox-water"> </input>
     </div>
   </div>
     <div class="town-creature">
